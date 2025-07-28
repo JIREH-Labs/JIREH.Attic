@@ -9,7 +9,7 @@ const Login = component$(() => {
     <>
       <div class="min-h-screen bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center p-4">
         <div class="w-full max-w-6xl bg-white rounded-2xl shadow-2xl overflow-hidden">
-          <div class="flex flex-col lg:flex-row">
+          <div class="flex flex-col h-[calc(60vh-4rem)] lg:flex-row">
             {/* Section gauche - Formulaire */}
             <div class="lg:w-1/2 p-8 lg:p-12">
               {/* Logo */}
@@ -41,21 +41,20 @@ const Login = component$(() => {
           {/* Section droite - Image */}
           <div class="lg:w-1/2 relative">
             <img
-              src="/volunteers-helping-elderly.jpg"
+              src="/volunteers-helping-elderly-1024.webp"
               srcset="
-                /volunteers-helping-elderly.jpg 480w,
-                /volunteers-helping-elderly.jpg 768w,
-                /volunteers-helping-elderly.jpg 1024w,
-                /volunteers-helping-elderly.jpg 1600w
+                /volunteers-helping-elderly-480.webp 480w,
+                /volunteers-helping-elderly-768.webp 768w,
+                /volunteers-helping-elderly-1024.webp 1024w,
+                /volunteers-helping-elderly-1600.webp 1600w
               "
               sizes="(max-width: 600px) 480px,
                     (max-width: 900px) 768px,
                     (max-width: 1200px) 1024px,
                     1600px"
-              alt="Photo optimisée"
-              
+              alt="Des volontaires aidant des personnes âgées"
               class="w-full h-64 lg:h-full object-cover"
-              loading="lazy"
+              loading="eager"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent lg:hidden"></div>
           </div>

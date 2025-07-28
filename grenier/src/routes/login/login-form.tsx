@@ -45,15 +45,16 @@ export const LoginForm = component$(() => {
                         id="password"
                         name="password"
                         placeholder="••••••••"
-                        class="w-full px-4 py-4 pr-12 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 text-lg"
+                        class="w-full px-4 py-4 pr-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200 text-lg"
                         onInput$={handlePasswordInput}
                         required
                     />
 
                     <button
                         type="button"
-                        class ="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none"
+                        class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none p-2"
                         onClick$={togglePasswordVisibility}
+                        title={showPassword.value ? "Masquer le mot de passe" : "Afficher le mot de passe"}
                     >
                         {showPassword.value ? <EyeOffIcon /> : <EyeIcon />}
                     </button>
@@ -71,21 +72,24 @@ export const LoginForm = component$(() => {
                         <input 
                             type="checkbox"
                             name="Se souvenir de moi"
-                            class ="w-5 h-5 text-purple-600 border-gray-300 rounded focus:ring-purple-900" 
+                            class ="w-5 h-5 accent-purple-500 border-gray-300 rounded focus:ring-2 focus:ring-purple-900" 
                         />
                         <span class="ml-2 text-sm text-gray-700">Se souvenir de moi</span>
                     </label>
 
                     <a 
                         href="/forgot-password" 
-                        class="text-sm text-purple-600 hover:text-purple-800 transition-colors duration-200">
+                        class="text-sm text-purple-600 hover:text-purple-800 transition-colors duration-200"
+                        >
                         Mot de passe oublié ?
                     </a>
                 </div>
 
                 <button
                     type="submit"
-                    class ="w-full px-6 py-4 bg-purple-600 text-white rounded-xl font-semibold text-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled={isLoading.value}">
+                    class ="w-full px-6 py-4 bg-purple-600 text-white rounded-xl font-semibold text-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled={isLoading.value}"
+                    title="Se connecter"
+                    >
                     {isLoading.value ? (
                         <div class="flex items-center justify-center">
                             <LoadingSpinner />
